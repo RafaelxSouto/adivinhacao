@@ -1,8 +1,16 @@
+import styles from './app.module.css'
+import { Header } from './components/Header'
+
 export default function App() {
+  function handleRestartGame() {
+    alert('Gatilho executado!')
+  }
+
   return (
-    <div>
-      <h1>Hello World!</h1>
-      <button>Teste</button>
+    <div className={styles.container}>
+      <main>
+        <Header current={5} max={10} onRestart={handleRestartGame} />
+      </main>
     </div>
   )
 }
