@@ -15,16 +15,15 @@ export function LettersUsed({ data }: Props) {
     <div className={styles.lettersUsed}>
       <h5>Letras utilizadas</h5>
       <div>
-        {data.map(({ value, correct }) => (
+        {data.map(({ value, correct }, index) => (
           <Letter
+            key={index}
             value={value}
             size="small"
             color={correct ? 'correct' : 'wrong'}
           />
         ))}
       </div>
-
-    
     </div>
   )
 }
